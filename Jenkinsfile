@@ -1,19 +1,7 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'JDK21'
-        maven 'Maven3'
-    }
-
     stages {
-
-        stage('Checkout') {
-            steps {
-                git branch: 'master',
-                url: 'https://github.com/Siddhipardeshii/payroll-leave-module.git'
-            }
-        }
 
         stage('Build') {
             steps {
